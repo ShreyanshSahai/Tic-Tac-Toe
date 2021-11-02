@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Inconsolata&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(236, 234, 238);
+}
+
+nav {
+    background-color: rgb(38, 9, 49);
+    height: 60px;
+    color: white;
+    font-size: x-large;
+    display : flex;
+    align-items: center;
+    padding: 0 20px;
+    font-family: 'Inconsolata', monospace;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+.gameContainer {
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 13vw);
+    grid-template-rows: repeat(3, 13vw); 
+    font-family: 'Inconsolata', monospace;
+}
+
+.box {
+    border: 2px black solid;
+    font-size: 6vw;
+    cursor: pointer;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: rgb(225, 216, 233);
+}
+
+.gameInfo {
+    margin : 0 10vw; 
+    font-family: 'Dosis', sans-serif;
+    font-size: x-large;
+    font-weight: bolder;
+    text-shadow: 1px 1px rgb(226, 50, 226);
+}
+
+.gameInfo h1 {
+    font-size: 2.5rem;
+}
+
+.imgbox img {
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+#reset {
+    margin: 5px 11px;
+    padding: 6px 11px;
+    border-radius: 12px;
+    background-color: rgb(228, 212, 240);
+    cursor: pointer;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: x-large;
+}
+
+@media screen and (max-width: 960px) {
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo {
+        margin-top: 40px;
+    }
+    .gameInfo h1 {
+        font-size: 1.5rem;
+    }
+    .container {
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 16vw);
+        margin-left: 10px;
+    }
+}
